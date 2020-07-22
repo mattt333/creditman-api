@@ -15,6 +15,11 @@ public class Company {
 
     private long id;
     private String name;
+    private String country;
+    private int structure_grade;
+    private int cash_grade;
+    private int result_grade;
+    private int overall_grade;
 
     @OneToMany(mappedBy = "company")
     @JsonManagedReference
@@ -38,6 +43,46 @@ public class Company {
 
     public List<Account> getAccounts() {
         return accounts;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public int getStructure_grade() {
+        return structure_grade;
+    }
+
+    public void setStructure_grade(int structure_grade) {
+        this.structure_grade = structure_grade;
+    }
+
+    public int getCash_grade() {
+        return cash_grade;
+    }
+
+    public void setCash_grade(int cash_grade) {
+        this.cash_grade = cash_grade;
+    }
+
+    public int getResult_grade() {
+        return result_grade;
+    }
+
+    public void setResult_grade(int result_grade) {
+        this.result_grade = result_grade;
+    }
+
+    public int getOverall_grade() {
+        return overall_grade;
+    }
+
+    public void setOverall_grade(int overall_grade) {
+        this.overall_grade = overall_grade;
     }
 
     public void setAccounts(List<Account> accounts) {
