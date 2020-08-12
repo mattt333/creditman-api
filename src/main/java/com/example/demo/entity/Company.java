@@ -25,6 +25,9 @@ public class Company {
     @JsonManagedReference
     private List<Account> accounts;
 
+    public Company() {
+    }
+
     public long getId() {
         return id;
     }
@@ -88,4 +91,9 @@ public class Company {
     public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
     }
+
+   /* public void computeOverallGrade(){
+        Account account = this.accounts.get(0);
+        this.overall_grade = account.getSales()/account.getEbitda();
+    }*/
 }
