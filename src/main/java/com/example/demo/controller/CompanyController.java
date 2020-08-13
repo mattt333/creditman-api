@@ -14,9 +14,9 @@ import java.util.List;
 public class CompanyController {
     @Autowired
     CompanyService service;
-
     @GetMapping
     public List<Company> getAll(){
+
         return service.getAll();
     }
 

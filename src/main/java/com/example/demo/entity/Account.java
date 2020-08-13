@@ -29,7 +29,8 @@ public class Account {
     @JsonBackReference
     private Company company;
 
-
+    public Account() {
+    }
 
     public long getId() {
         return id;
@@ -38,8 +39,7 @@ public class Account {
     public void setId(long id) {
         this.id = id;
     }
-
-
+    
     public int getEquity() {
         return equity;
     }
