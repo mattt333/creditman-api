@@ -32,7 +32,8 @@ public class CompanyService {
     }
 
     public Company getById(long id) {
-        Company company= repository.findById(id).get();
+        return repository.findById(id).get();
+        /*Company company= repository.findById(id).get();
         int computed_grade;
         try {
             Account lastAccount = Collections.max(company.getAccounts(), Comparator.comparing(Account::getYear));
@@ -44,7 +45,7 @@ public class CompanyService {
         }
         finally {
             return company;
-        }
+        }*/
 
         }
 
@@ -60,10 +61,10 @@ public class CompanyService {
         companyToUpdate.setName(company.getName());
         companyToUpdate.setAccounts(company.getAccounts());
         companyToUpdate.setCountry(company.getCountry());
-        companyToUpdate.setStructure_grade(company.getStructure_grade());
-        companyToUpdate.setCash_grade(company.getCash_grade());
-        companyToUpdate.setResult_grade(company.getResult_grade());
-        companyToUpdate.setOverall_grade(company.getOverall_grade());
+        companyToUpdate.setStructure_grade();
+        companyToUpdate.setCash_grade();
+        companyToUpdate.setResult_grade();
+        companyToUpdate.setOverall_grade();
         return repository.save(companyToUpdate);
     }
 
